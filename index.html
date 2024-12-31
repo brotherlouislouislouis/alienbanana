@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Banana Site</title>
+    <style>
+        @font-face {
+            font-family: 'Alien';
+            src: url('Alien.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('alieny.avif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .content img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: auto;
+        }
+
+        .contract {
+            margin-top: -3rem;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            border: 2px solid white;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .contract:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .links {
+            margin-top: 14rem;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+            border: 2px solid white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .scrolling-text {
+            position: absolute;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            color: rgba(255, 255, 255, 0.686);
+            font-size: 3rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 0.5rem 0;
+            font-family: 'Alien', sans-serif;
+        }
+
+        .scrolling-text span {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .scrolling-text spann {
+            display: inline-block;
+            animation: scroll-right 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scroll-right {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        .top-scrolling-text {
+            top: 0;
+        }
+
+        .bottom-scrolling-text {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrolling-text top-scrolling-text">
+        <span>$ANANA $ANANA $ANANA $ANANA $ANANA  $ANANA $ANANA $ANANA $ANANA $ANANA</span>
+    </div>
+
+    <div class="content">
+        <img src="alien banana.png" alt="Alien Banana">
+        <div class="contract" onclick="copyToClipboard('xyzxxzczdasdpump')">
+            xyzxxzczdasdpump
+        </div>
+        <div class="links">
+            <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+            <a href="https://dexscreener.com" target="_blank">DexScreener</a>
+            <a href="https://twitter.com/yourtwitter" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <div class="scrolling-text bottom-scrolling-text">
+        <spann>$ANANA $ANANA $ANANA $ANANA $ANANA  $ANANA $ANANA $ANANA $ANANA $ANANA</spann>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('xyzxxzczdasdpump copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        }
+    </script>
+</body>
+</html>
